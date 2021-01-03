@@ -11,7 +11,7 @@ import song.mingu.proto.SampleServiceGrpc;
 @Slf4j
 @Service
 public class GrpcClientService {
-    private static final int PORT = 3030;
+    public static final int PORT = 3030;
     public static final String HOST = "localhost";
     private final SampleServiceGrpc.SampleServiceStub asyncStub = SampleServiceGrpc.newStub(
             ManagedChannelBuilder.forAddress(HOST, PORT)
